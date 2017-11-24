@@ -7,6 +7,9 @@
 # Pull base image.
 FROM ubuntu:14.04
 
+# Removing frontend dialog message
+ARG DEBIAN_FRONTEND=noninteractive
+
 # Install.
 RUN \
   sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
